@@ -20,9 +20,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      button: '確認'
     }
   },
+  computed: mapGetters('Form', {
+    'button': 'getButton'
+  }),
   methods: mapActions('From',{
     'buttonAction' : 'buttonAction'
   }),
