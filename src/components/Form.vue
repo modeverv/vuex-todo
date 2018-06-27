@@ -13,14 +13,19 @@
 import HeadComp from '@/components/modules/HeadComp'
 import TextareaComp from '@/components/modules/TextareaComp'
 import StringComp from '@/components/modules/StringComp'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
   name: 'Form',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      button: '確認'
     }
   },
+  methods: mapActions('From',{
+    'buttonAction' : 'buttonAction'
+  }),
   components: {
     HeadComp,
     TextareaComp,
